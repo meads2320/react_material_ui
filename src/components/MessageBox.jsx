@@ -16,10 +16,10 @@ class MessageBox extends React.Component {
              <MuiThemeProvider muiTheme={getMuiTheme(lightBaseTheme)}>
                 <Card style={
                     {
-                        maxWidth: '1200',
+                        maxWidth: '1200px',
                         width: '100%',
-                        marign: '30px auto',
-                        padding:'30px'
+                        padding:'30px',
+                        marginLeft:'30px'
                     }
                 }>
                     <textarea style={

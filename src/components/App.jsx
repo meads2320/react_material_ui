@@ -13,13 +13,13 @@ class App extends React.Component {
     return (
         <div>
         <MuiThemeProvider muiTheme={getMuiTheme(lightBaseTheme)}>
-        <AppBar title="My AppBar" />
+        <AppBar title="My Chat App" />
         </MuiThemeProvider>
             <div style={
                     {
                         display: 'flex',
                         flexFlow: 'row wrap',
-                        maxWidth: '1200',
+                        maxWidth: '1200px',
                         width: '100%',
                         marign: '30px auto 30px',
                         padding:'30px'
