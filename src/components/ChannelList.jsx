@@ -1,28 +1,25 @@
 import React from 'react';
-import Message from './Message.jsx';
+import Channel from './Channel.jsx';
 import {List, ListItem} from 'material-ui/List';
 import lightBaseTheme from 'material-ui/styles/baseThemes/lightBaseTheme';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
 
-class MessageList extends React.Component { 
+class ChannelList extends React.Component { 
     constructor(props) { 
         super(props);
          this.state = {
-            messages: [
-                'hi there',
-                'hello',
-                'how are you',
-                'good',
-                'cool'
+            channels: [
+                'Channel 1',
+                'Channel 2'
             ]
         };
     }
     render() { 
-        var messageNodes = this.state.messages.map((message, index) => {
+        var channelNodes = this.state.channels.map((channel, index) => {
             return (
-              <Message message={message} />
+              <Channel channel={channel} />
             );
         });
 
@@ -30,12 +27,11 @@ class MessageList extends React.Component {
              <MuiThemeProvider muiTheme={getMuiTheme(lightBaseTheme)}>
                 <Card style={
                     {
-                        flexGrow: 2,
-                        marginLeft:30
+                        flexGrow: 1
                     }
                 }>
                     <List>
-                    {messageNodes}
+                    {channelNodes}
                     </List> 
                 </Card>
             </MuiThemeProvider>
@@ -46,4 +42,4 @@ class MessageList extends React.Component {
     }
 }
 
-export default MessageList;
+export default ChannelList;
